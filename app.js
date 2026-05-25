@@ -60,8 +60,32 @@
     document.documentElement.lang = state.lang === 'uk' ? 'uk' : state.lang;
     applyI18n();
     applyConfig();
+    applyLinks();
     renderDynamic();
     updateLangButtons();
+  }
+
+  // Set native href on Telegram / phone links from config.
+  // Using href (not window.open) is more reliable: works with pop-up blockers,
+  // ctrl+click, long-press, and lets Telegram/phone apps intercept the link.
+  function applyLinks() {
+    const u = (state.config.contacts?.telegram || '').replace(/^@/, '').trim();
+    const p = (state.config.contacts?.phone || '').replace(/[^\d+]/g, '').trim();
+
+    document.querySelectorAll('[data-action="tg-admin"]').forEach((el) => {
+      if (u) {
+        el.setAttribute('href', `https://t.me/${encodeURIComponent(u)}`);
+        el.setAttribute('target', '_blank');
+        el.setAttribute('rel', 'noopener');
+      } else {
+        el.removeAttribute('href');
+      }
+    });
+
+    document.querySelectorAll('[data-action="call"]').forEach((el) => {
+      if (p) el.setAttribute('href', `tel:${p}`);
+      else el.removeAttribute('href');
+    });
   }
 
   function applyI18n() {
@@ -260,24 +284,11 @@
   /* ───────── Action handlers ───────── */
 
   function bindActions() {
+    // tg-admin and call are handled by native href (set in applyLinks).
     document.addEventListener('click', (e) => {
       const t = e.target.closest('[data-action]');
       if (!t) return;
       const action = t.getAttribute('data-action');
-
-      if (action === 'tg-admin') {
-        e.preventDefault();
-        const u = (state.config.contacts.telegram || '').replace(/^@/, '');
-        if (!u) return toast('Telegram администратора не настроен');
-        window.open(`https://t.me/boris8242}`, '_blank', 'noopener');
-      }
-
-      if (action === 'call') {
-        e.preventDefault();
-        const p = (state.config.contacts.phone || '').replace(/[^\d+]/g, '');
-        if (!p) return toast('Телефон не настроен');
-        location.href = `tel:${p}`;
-      }
 
       if (action === 'copy-wifi') {
         e.preventDefault();
