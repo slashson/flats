@@ -1,0 +1,86 @@
+{
+  "studioNumber": "12",
+  "wifi": {
+    "ssid": "MyStudio_5GHz",
+    "password": "welcome2024"
+  },
+  "contacts": {
+    "telegram": "boris8242",
+    "phone": "+380974440401"
+  },
+  "telegramBot": "studio_bot_placeholder",
+  "location": {
+    "lat": 50.4501,
+    "lng": 30.5234,
+    "address": "Киев"
+  },
+  "prices": {
+    "extensionPerNight": 500,
+    "deposit": 2000,
+    "currency": "грн"
+  },
+  "checkoutTime": "12:00",
+  "appliances": [
+    {
+      "id": "floor",
+      "icon": "🔥"
+    },
+    {
+      "id": "boiler",
+      "icon": "💧"
+    },
+    {
+      "id": "ac",
+      "icon": "❄️"
+    },
+    {
+      "id": "stove",
+      "icon": "🍳"
+    },
+    {
+      "id": "washer",
+      "icon": "🧺"
+    },
+    {
+      "id": "tv",
+      "icon": "📺"
+    }
+  ],
+  "nearby": [
+    {
+      "id": "atb",
+      "icon": "🛒",
+      "query": "АТБ"
+    },
+    {
+      "id": "pharmacy",
+      "icon": "💊",
+      "query": "аптека"
+    },
+    {
+      "id": "coffee",
+      "icon": "☕",
+      "query": "кофейня"
+    },
+    {
+      "id": "food",
+      "icon": "🍔",
+      "query": "доставка еды"
+    },
+    {
+      "id": "atm",
+      "icon": "🏧",
+      "query": "банкомат"
+    },
+    {
+      "id": "transit",
+      "icon": "🚇",
+      "query": "общественный транспорт"
+    },
+    {
+      "id": "taxi",
+      "icon": "🚕",
+      "query": "такси"
+    }
+  ]
+}

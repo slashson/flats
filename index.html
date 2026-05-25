@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#f5f1ea" />
+  <meta name="robots" content="noindex" />
+  <title>Studio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🏠%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+
+  <header class="topbar">
+    <button class="back" type="button" data-back hidden aria-label="Back">
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+        <path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+    <div class="lang">
+      <button type="button" data-lang="ru">RU</button>
+      <button type="button" data-lang="uk">UA</button>
+      <button type="button" data-lang="en">EN</button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ───────── Home ───────── -->
+    <section class="screen" id="home" data-screen="home">
+      <div class="hero">
+        <p class="eyebrow" data-i18n="home.welcome"></p>
+        <h1 class="studio-no">
+          <span data-i18n="home.studioPrefix"></span>
+          <span data-config="studioNumber"></span>
+        </h1>
+      </div>
+
+      <nav class="menu">
+        <a class="menu-item" href="#wifi">
+          <span class="menu-icon">📶</span>
+          <span class="menu-label" data-i18n="home.buttons.wifi"></span>
+          <span class="menu-arrow">→</span>
+        </a>
+        <a class="menu-item" href="#howto">
+          <span class="menu-icon">🛠️</span>
+          <span class="menu-label" data-i18n="home.buttons.howTo"></span>
+          <span class="menu-arrow">→</span>
+        </a>
+        <a class="menu-item" href="#extend">
+          <span class="menu-icon">📅</span>
+          <span class="menu-label" data-i18n="home.buttons.extend"></span>
+          <span class="menu-arrow">→</span>
+        </a>
+        <a class="menu-item" href="#support">
+          <span class="menu-icon">💬</span>
+          <span class="menu-label" data-i18n="home.buttons.support"></span>
+          <span class="menu-arrow">→</span>
+        </a>
+        <a class="menu-item" href="#rules">
+          <span class="menu-icon">📋</span>
+          <span class="menu-label" data-i18n="home.buttons.rules"></span>
+          <span class="menu-arrow">→</span>
+        </a>
+        <a class="menu-item" href="#deposit">
+          <span class="menu-icon">🛡️</span>
+          <span class="menu-label" data-i18n="home.buttons.deposit"></span>
+          <span class="menu-arrow">→</span>
+        </a>
+        <a class="menu-item" href="#nearby">
+          <span class="menu-icon">📍</span>
+          <span class="menu-label" data-i18n="home.buttons.nearby"></span>
+          <span class="menu-arrow">→</span>
+        </a>
+        <a class="menu-item" href="#checkout">
+          <span class="menu-icon">👋</span>
+          <span class="menu-label" data-i18n="home.buttons.checkout"></span>
+          <span class="menu-arrow">→</span>
+        </a>
+      </nav>
+
+      <a class="btn btn-primary btn-tg" data-action="tg-admin">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+          <path d="M21.4 4.4L2.7 11.6c-1.3.5-1.3 1.2-.2 1.5l4.8 1.5 11-7c.5-.3 1-.1.6.2l-8.9 8 .3 4.9c.5 0 .7-.2 1-.5l2.4-2.3 5 3.7c.9.5 1.6.2 1.8-.8l3.3-15.5c.4-1.3-.5-1.9-1.4-1.5z" fill="currentColor"/>
+        </svg>
+        <span data-i18n="common.contactAdmin"></span>
+      </a>
+    </section>
+
+    <!-- ───────── Wi-Fi ───────── -->
+    <section class="screen" id="wifi" data-screen="wifi" hidden>
+      <h1 class="screen-title" data-i18n="wifi.title"></h1>
+
+      <div class="card">
+        <div class="field">
+          <span class="field-label" data-i18n="wifi.network"></span>
+          <span class="field-value" data-config="wifi.ssid"></span>
+        </div>
+        <div class="field">
+          <span class="field-label" data-i18n="wifi.password"></span>
+          <span class="field-value mono" data-config="wifi.password"></span>
+        </div>
+      </div>
+
+      <button class="btn btn-primary" type="button" data-action="copy-wifi">
+        <span data-i18n="common.copy"></span>
+      </button>
+
+      <a class="btn btn-tg-secondary" data-action="tg-admin">
+        <span data-i18n="common.openTelegram"></span>
+      </a>
+
+      <p class="hint" data-i18n="wifi.footer"></p>
+    </section>
+
+    <!-- ───────── How-to ───────── -->
+    <section class="screen" id="howto" data-screen="howto" hidden>
+      <h1 class="screen-title" data-i18n="howTo.title"></h1>
+      <div class="appliances" data-render="appliances"></div>
+      <a class="btn btn-primary btn-tg" data-action="tg-admin">
+        <span data-i18n="common.contactAdmin"></span>
+      </a>
+    </section>
+
+    <!-- Appliance details (sub-screen) -->
+    <section class="screen" id="appliance" data-screen="appliance" hidden>
+      <h1 class="screen-title" data-render="appliance-title"></h1>
+      <div class="appliance-photo">
+        <div class="photo-placeholder" data-render="appliance-photo">
+          <span data-i18n="common.soon"></span>
+        </div>
+      </div>
+      <p class="prose" data-render="appliance-text"></p>
+      <a class="btn btn-primary btn-tg" data-action="tg-admin">
+        <span data-i18n="common.contactAdmin"></span>
+      </a>
+    </section>
+
+    <!-- ───────── Extend ───────── -->
+    <section class="screen" id="extend" data-screen="extend" hidden>
+      <h1 class="screen-title" data-i18n="extend.title"></h1>
+
+      <div class="price-card">
+        <p class="price-label" data-i18n="extend.priceLabel"></p>
+        <p class="price-value">
+          <span data-config="prices.extensionPerNight"></span>
+          <span data-config="prices.currency"></span>
+          <span class="price-suffix">/ <span data-i18n="extend.perNight"></span></span>
+        </p>
+      </div>
+
+      <p class="prose" data-i18n="extend.description"></p>
+
+      <a class="btn btn-primary btn-tg" data-action="tg-admin">
+        <span data-i18n="common.writeTelegram"></span>
+      </a>
+      <a class="btn btn-secondary" data-action="call">
+        <span data-i18n="common.call"></span>
+      </a>
+      <p class="hint" data-i18n="extend.footer"></p>
+    </section>
+
+    <!-- ───────── Support ───────── -->
+    <section class="screen" id="support" data-screen="support" hidden>
+      <h1 class="screen-title" data-i18n="support.title"></h1>
+      <p class="lede" data-i18n="support.subtitle"></p>
+
+      <a class="btn btn-primary btn-tg" data-action="tg-admin">
+        <span data-i18n="common.writeTelegram"></span>
+      </a>
+      <a class="btn btn-secondary" data-action="call">
+        <span data-i18n="common.call"></span>
+      </a>
+      <p class="hint" data-i18n="support.footer"></p>
+    </section>
+
+    <!-- ───────── Rules ───────── -->
+    <section class="screen" id="rules" data-screen="rules" hidden>
+      <h1 class="screen-title" data-i18n="rules.title"></h1>
+      <p class="prose" data-i18n="rules.intro"></p>
+      <ul class="bullets" data-render="rules-list"></ul>
+      <p class="prose prose-outro" data-i18n="rules.outro"></p>
+    </section>
+
+    <!-- ───────── Deposit ───────── -->
+    <section class="screen" id="deposit" data-screen="deposit" hidden>
+      <h1 class="screen-title" data-i18n="deposit.title"></h1>
+      <p class="prose" data-render="deposit-intro"></p>
+
+      <h2 class="subhead" data-i18n="deposit.coversTitle"></h2>
+      <ul class="bullets" data-render="deposit-covers"></ul>
+
+      <h2 class="subhead" data-i18n="deposit.rulesTitle"></h2>
+      <ul class="bullets" data-render="deposit-rules"></ul>
+
+      <h2 class="subhead" data-i18n="deposit.returnTitle"></h2>
+      <ul class="bullets" data-render="deposit-return"></ul>
+    </section>
+
+    <!-- ───────── Nearby ───────── -->
+    <section class="screen" id="nearby" data-screen="nearby" hidden>
+      <h1 class="screen-title" data-i18n="nearby.title"></h1>
+      <div class="nearby-list" data-render="nearby"></div>
+    </section>
+
+    <!-- ───────── Checkout ───────── -->
+    <section class="screen" id="checkout" data-screen="checkout" hidden>
+      <h1 class="screen-title" data-i18n="checkout.title"></h1>
+      <p class="lede" data-render="checkout-time"></p>
+
+      <h2 class="subhead" data-i18n="checkout.beforeTitle"></h2>
+      <ul class="bullets" data-render="checkout-before"></ul>
+
+      <a class="btn btn-primary btn-tg" data-action="tg-admin">
+        <span data-i18n="common.writeTelegram"></span>
+      </a>
+      <a class="btn btn-secondary" data-action="call">
+        <span data-i18n="common.call"></span>
+      </a>
+      <p class="hint" data-i18n="checkout.footer"></p>
+    </section>
+
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <script src="app.js"></script>
+</body>
+</html>

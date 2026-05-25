@@ -1,0 +1,137 @@
+{
+  "langName": "EN",
+
+  "common": {
+    "back": "Back",
+    "contactAdmin": "Contact host",
+    "writeTelegram": "Message on Telegram",
+    "openTelegram": "Open host's Telegram",
+    "call": "Call",
+    "copy": "Copy password",
+    "copied": "Copied",
+    "soon": "Coming soon"
+  },
+
+  "home": {
+    "welcome": "Welcome",
+    "studioPrefix": "Studio №",
+    "buttons": {
+      "wifi": "Wi-Fi",
+      "howTo": "How to use the studio",
+      "extend": "Extend your stay",
+      "support": "Support",
+      "rules": "House rules",
+      "deposit": "Security deposit",
+      "nearby": "Nearby essentials",
+      "checkout": "Check-out"
+    }
+  },
+
+  "wifi": {
+    "title": "Wi-Fi",
+    "network": "Network",
+    "password": "Password",
+    "footer": "If you have connection issues — message the host."
+  },
+
+  "howTo": {
+    "title": "How to use the studio",
+    "items": {
+      "floor":  { "title": "Heated floor",     "text": "Instructions coming soon." },
+      "boiler": { "title": "Water heater",     "text": "Instructions coming soon." },
+      "ac":     { "title": "Air conditioner",  "text": "Instructions coming soon." },
+      "stove":  { "title": "Induction cooktop","text": "Turn on the cooktop with the power button. Place cookware on a burner. Adjust power with the +/− buttons." },
+      "washer": { "title": "Washing machine",  "text": "Instructions coming soon." },
+      "tv":     { "title": "TV",               "text": "Instructions coming soon." }
+    }
+  },
+
+  "extend": {
+    "title": "Extend your stay",
+    "priceLabel": "Extension price",
+    "perNight": "night",
+    "description": "To extend your stay, please contact the host.",
+    "footer": "Call if it's urgent and the host doesn't reply on Telegram."
+  },
+
+  "support": {
+    "title": "Support",
+    "subtitle": "Host's Telegram",
+    "footer": "If it's truly urgent — please call."
+  },
+
+  "rules": {
+    "title": "House rules",
+    "intro": "These house rules exist to keep the stay comfortable, safe and predictable for everyone. Please be respectful of the space, the neighbours and the calm atmosphere.",
+    "list": [
+      "Smoking inside the studio is not allowed",
+      "Sharing access, keys or codes with third parties is not allowed",
+      "Short visits from guests are allowed if house rules are followed and neighbours are respected",
+      "Guests must not cause discomfort to neighbours",
+      "Complaints from neighbours about noise or behaviour are treated as a rules violation",
+      "Heavy soiling of the studio is treated as a rules violation",
+      "The guest is responsible for any confirmed damage to studio property",
+      "Damage is documented by the host during the unit inspection",
+      "For a first minor violation a warning may be issued without withholding the deposit",
+      "For a serious violation, the deposit may be withheld in full",
+      "The decision to withhold the deposit is made by the host",
+      "When needed, the situation is discussed with the guest in advance"
+    ],
+    "outro": "Thank you for respecting the space."
+  },
+
+  "deposit": {
+    "title": "Security deposit",
+    "intro": "On check-in, a security deposit of {amount} {currency} is required. The deposit is paid after the unit inspection and confirmed check-in. Payment is processed via the Telegram bot to the bank account.",
+    "coversTitle": "The deposit covers:",
+    "covers": [
+      "property damage",
+      "heavy soiling",
+      "smoking inside the studio",
+      "house rules violations",
+      "unpaid electricity"
+    ],
+    "rulesTitle": "Withholding conditions:",
+    "rules": [
+      "For a rules violation, the host may withhold part or all of the deposit",
+      "For a first minor violation a warning may be issued without withholding the deposit",
+      "The decision to withhold the deposit is made by the host",
+      "When needed, the situation is discussed with the guest in advance"
+    ],
+    "returnTitle": "Deposit return:",
+    "return": [
+      "After check-out, the studio is inspected and the final electricity bill is settled",
+      "The deposit is returned after the unit inspection and electricity payment",
+      "Usually the refund is processed within a few hours after check-out",
+      "Maximum refund time — 24 hours after check-out",
+      "Refunds are sent to the same account or payment method that was used to pay"
+    ]
+  },
+
+  "nearby": {
+    "title": "Nearby essentials",
+    "openMap": "Open on map",
+    "items": {
+      "atb":      "ATB supermarket",
+      "pharmacy": "Pharmacies",
+      "coffee":   "Coffee",
+      "food":     "Food delivery",
+      "atm":      "ATMs",
+      "transit":  "Public transit",
+      "taxi":     "Taxi"
+    }
+  },
+
+  "checkout": {
+    "title": "Check-out",
+    "time": "Check-out — by {time}",
+    "beforeTitle": "Before you leave:",
+    "before": [
+      "Turn off appliances",
+      "Take out the trash",
+      "Close the windows",
+      "Send a photo of the meter via the Telegram bot"
+    ],
+    "footer": "Thank you for taking good care of the place."
+  }
+}
