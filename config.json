@@ -1,8 +1,8 @@
 {
   "studioNumber": "12",
   "wifi": {
-    "ssid": "MyStudio_5GHz",
-    "password": "welcome2024"
+    "ssid": "TestWiFi",
+    "password": "[PASSWORD]"
   },
   "contacts": {
     "telegram": "boris8242",
